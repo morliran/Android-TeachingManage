@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".MainmineStudents">
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:text="@string/studentId"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/editText_id"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:text="@string/studentFirstName"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/editText_name"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:text="@string/studentLastName"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/editText_lastname"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:text="@string/studentClass"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <EditText
+        android:id="@+id/editText_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textView"
+        android:layout_toEndOf="@+id/textView"
+        android:layout_toRightOf="@+id/textView"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/editText_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textView2"
+        android:layout_toEndOf="@+id/textView2"
+        android:layout_toRightOf="@+id/textView2"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/editText_lastname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textView3"
+        android:layout_toEndOf="@+id/textView3"
+        android:layout_toRightOf="@+id/textView3"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/editText_class"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textView4"
+        android:layout_toEndOf="@+id/textView4"
+        android:layout_toRightOf="@+id/textView4"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:inputType="numberDecimal" />
+
+    <CheckBox
+        android:id="@+id/editCheck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editText_class"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="-3dp"
+        android:layout_marginLeft="-3dp"
+        android:layout_marginTop="108dp"
+        android:buttonTint="#fff"
+        android:text="@string/wantToedit"
+        android:textColor="#fff"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/button_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/editCheck"
+        android:background="@drawable/border"
+        android:layout_marginTop="15dp"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:text="@string/submit" />
+
+    <Button
+        android:id="@+id/button_viewAll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/radiosl"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/border"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:text="@string/show" />
+
+    <LinearLayout
+        android:id="@+id/radiosl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button_add"
+        android:orientation="vertical">
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:id="@+id/rg1"
+        android:checked="true"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:clickable="false"
+        android:buttonTint="#fff"
+        android:text="@string/studInfo"/>
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:id="@+id/rg2"
+        android:checked="true"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:clickable="false"
+        android:buttonTint="#fff"
+        android:text="@string/studInfo2"/>
+    </LinearLayout>
+    <Button
+        android:id="@+id/button_update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/radiosl"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/border"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:text="@string/edit"/>
+
+    <Button
+        android:id="@+id/button_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/button_viewAll"
+        android:layout_alignStart="@+id/button_viewAll"
+        android:layout_below="@+id/radiosl"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/border"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:text="@string/delete" />
+
+    <Button
+        android:id="@+id/btnClose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/button_delete"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/border"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:text="@string/close" />
+
+    <ImageView
+        android:id="@+id/image_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/button_add"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="185dp"
+        android:layout_marginBottom="50dp"/>
+
+</RelativeLayout>

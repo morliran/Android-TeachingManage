@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/llCourse"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background"
+    android:orientation="vertical"
+    tools:context=".MainmineCourses">
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="10sp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:text="@string/courseId" />
+
+        <EditText
+            android:id="@+id/txtCourseIdAdd"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.75"
+            android:ems="10"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:inputType="numberDecimal" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="10sp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:text="@string/courseRoom" />
+
+        <EditText
+            android:id="@+id/txtCourseRoomAdd"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.75"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:ems="10" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="10sp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:text="@string/courseName" />
+
+        <EditText
+            android:id="@+id/txtCourseNameAdd"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.75"
+            android:ems="10"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:inputType="textPersonName" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="10sp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:text="@string/courseDate" />
+
+        <EditText
+            android:id="@+id/txtCourseDateAdd"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.75"
+            android:ems="10"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:inputType="date" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="10sp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:text="@string/courseHours" />
+
+        <EditText
+            android:id="@+id/txtCourseHoursAdd"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.75"
+            android:ems="10"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:inputType="numberDecimal" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="10sp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:text="@string/courseClass" />
+
+        <EditText
+            android:id="@+id/txtCourseClassAdd"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.75"
+            android:ems="10"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:inputType="numberDecimal" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp">
+
+        <Button
+            android:id="@+id/btnClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.20"
+            android:background="@drawable/border"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:text="@string/close" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.50" />
+
+        <Button
+            android:id="@+id/btnAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.20"
+            android:background="@drawable/border"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:text="@string/submit" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/courseSpinnerLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5sp"
+        android:paddingLeft="10sp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="0.25"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:text="@string/select_course" />
+
+        <Spinner
+            android:id="@+id/courseSpinner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:layout_weight="0.75" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/displayArea"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10sp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.25"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                android:text="@string/courseId" />
+
+            <TextView
+                android:id="@+id/txtCourseIdDisplay"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.55"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                android:ems="10" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.25"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                android:text="@string/courseRoom" />
+
+            <TextView
+                android:id="@+id/txtCourseRoomDisplay"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.55"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                android:ems="10" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10sp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.25"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                android:text="@string/courseName" />
+
+            <TextView
+                android:id="@+id/txtCourseNameDisplay"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.55"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                android:ems="10" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.25"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                android:text="@string/courseDate" />
+
+            <TextView
+                android:id="@+id/txtCourseDateDisplay"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.55"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                android:ems="10" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10sp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.25"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                android:text="@string/courseHours" />
+
+            <TextView
+                android:id="@+id/txtCourseHoursDisplay"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="0.55"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                android:ems="10" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.25"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                android:text="@string/courseClass" />
+
+            <TextView
+                android:id="@+id/txtCourseClassDisplay"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="0.55"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                android:ems="10" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/editArea"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10sp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.25"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                android:text="@string/courseId" />
+
+            <EditText
+                android:id="@+id/txtCourseIdEdit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.55"
+                android:ems="10"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                android:inputType="numberDecimal" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.25"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                android:text="@string/courseRoom"/>
+
+            <EditText
+                android:id="@+id/txtCourseRoomEdit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.55"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                android:ems="10"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10sp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.25"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                android:text="@string/courseName"/>
+
+            <EditText
+                android:id="@+id/txtCourseNameEdit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.55"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                android:ems="10"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.25"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                android:text="@string/courseDate"/>
+
+            <EditText
+                android:id="@+id/txtCourseDateEdit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.55"
+                android:ems="10"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                android:inputType="date"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10sp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.25"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                android:text="@string/courseHours" />
+
+            <EditText
+                android:id="@+id/txtCourseHoursEdit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.55"
+                android:ems="10"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                android:inputType="numberDecimal" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.25"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                android:text="@string/classSerial" />
+
+            <EditText
+                android:id="@+id/txtCourseClassEdit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.55"
+                android:ems="10"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                android:inputType="numberDecimal" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/editButton"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <Button
+            android:id="@+id/btnDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.20"
+            android:background="@drawable/border"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:text="@string/delete" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.30" />
+
+        <Button
+            android:id="@+id/btnEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.20"
+            android:background="@drawable/border"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:text="@string/edit" />
+    </LinearLayout>
+</LinearLayout>

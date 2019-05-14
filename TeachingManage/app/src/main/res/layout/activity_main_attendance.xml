@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainAttendance">
+    <LinearLayout
+        android:id="@+id/classSpinnerLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5sp"
+        android:paddingLeft="10sp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="0.25"
+            android:text="@string/select_class" />
+
+        <Spinner
+            android:id="@+id/classSpinner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="0.75" />
+    </LinearLayout>
+    <LinearLayout
+        android:paddingLeft="10sp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/classSpinnerLayout"
+        android:id="@+id/courseSpinnerLayout"
+        android:orientation="horizontal"
+        android:padding="5sp">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="0.25"
+            android:text="@string/select_course" />
+        <Spinner
+            android:id="@+id/courseSpinner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="0.75" />
+    </LinearLayout>
+    <Button
+        android:id="@+id/button_viewAll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/courseSpinnerLayout"
+        android:enabled="false"
+        android:layout_centerHorizontal="true"
+        android:text="@string/makeAttendance" />
+    <LinearLayout
+        android:id="@+id/informationButtons"
+        android:layout_width="fill_parent"
+        android:visibility="visible"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button_viewAll"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btnClass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.20"
+            android:text="@string/findAttendanceForClass" />
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.30" />
+        <Button
+            android:id="@+id/btnCourse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.20"
+            android:text="@string/findAttendanceForCourse" />
+    </LinearLayout>
+    <Button
+        android:id="@+id/button_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/informationButtons"
+        android:layout_centerHorizontal="true"
+        android:text="@string/close"/>
+    <Button
+        android:id="@+id/button_show"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/informationButtons"
+        android:text="@string/show"/>
+
+    <LinearLayout
+        android:id="@+id/infoMessage"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button_close"
+        android:visibility="invisible"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/txtMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/attendanceCanceled"
+            android:textAlignment="center"
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="30sp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/dateChecks"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/infoMessage"
+        android:orientation="vertical"
+        android:visibility="invisible">
+
+        <TextView
+            android:id="@+id/checker1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text=""/>
+
+    </LinearLayout>
+</RelativeLayout>
